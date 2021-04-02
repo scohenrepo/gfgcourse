@@ -21,8 +21,9 @@ public class Calse3_9 {
         }
         for (int i = 1; i < arr.length; i++) {
             sums[i] += sums[i-1] + arr[i];
-            if (mySet.contains(sums[i]) || sums[i] == 0) {
-                System.out.println("There is a subarray which elements sum zero");
+            int res = sums[i] - k;
+            if (mySet.contains(res) || sums[i] == k) {
+                System.out.println("There is a subarray which elements sum k");
             }
             System.out.println(sums[i]);
             mySet.add(sums[i]);
